@@ -8,3 +8,38 @@ updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 Q2
 ALTER TABLE people ADD department_id INT UNSIGNED AFTER email ;
+
+Q3
+INSERT INTO departments (name)
+VALUES
+('営業'),
+('開発'),
+('経理'),
+('人事'),
+('情報システム');
+
+INSERT INTO people (name,department_id)
+VALUES
+('加藤やすひろ',1),
+('石川しゅうへい',1),
+('前田せいじ',1),
+('村上まさゆき',2),
+('白井けんじ',2),
+('柳沢たろう',2),
+('片山とおる',2),
+('原田しんいちろう',3),
+('足立たけし',4),
+('本田りゅういち',5);
+
+INSERT INTO reports (person_id,content)
+VALUES
+(16,'オンラインを減らして得意先に会う'),
+(15,'トレランシューズを新調する'),
+(14,'大晦日じゃなくても大掃除する'),
+(13,'タキシードを着てみる'),
+(12,'ホテルみたいなオムレツをマスターする'),
+(11,'単独で海外旅行へ行く'),
+(10,'お掃除ロボットを導入する'),
+(9,'平日の昼間に映画を観る'),
+(8,'ワールドカップをスタジアムで観戦する'),
+
