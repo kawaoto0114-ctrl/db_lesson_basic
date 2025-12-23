@@ -43,3 +43,7 @@ VALUES
 (9,'平日の昼間に映画を観る'),
 (8,'ワールドカップをスタジアムで観戦する'),
 
+Q4
+UPDATE people SET department_id = 1 WHERE age < 30;
+UPDATE people SET department_id = 4 WHERE age > 30;
+UPDATE people SET department_id = 5 WHERE person_id = 6;
