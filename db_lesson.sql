@@ -50,3 +50,8 @@ UPDATE people SET department_id = 5 WHERE person_id = 6;
 
 Q5
 SELECT * FROM people ORDER BY age DESC
+
+Q6
+peopleテーブルのdepartment_idが1のレコード一覧を、
+created_atが若い順で並べ替えし、
+name,email,ageカラムを表示する
