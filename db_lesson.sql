@@ -49,9 +49,14 @@ UPDATE people SET department_id = 4 WHERE age > 30;
 UPDATE people SET department_id = 5 WHERE person_id = 6;
 
 Q5
-SELECT * FROM people ORDER BY age DESC
+SELECT * FROM people ORDER BY age DESC;
 
 Q6
 peopleテーブルのdepartment_idが1のレコード一覧を、
 created_atが若い順で並べ替えし、
 name,email,ageカラムを表示する
+
+Q7
+SELECT * FROM people WHERE age BETWEEN 20 AND 29 AND gender = 2;
+SELECT * FROM people WHERE age BETWEEN 40 AND 49 AND gender = 1;
+
