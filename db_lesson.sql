@@ -47,3 +47,6 @@ Q4
 UPDATE people SET department_id = 1 WHERE age < 30;
 UPDATE people SET department_id = 4 WHERE age > 30;
 UPDATE people SET department_id = 5 WHERE person_id = 6;
+
+Q5
+SELECT * FROM people ORDER BY age DESC
