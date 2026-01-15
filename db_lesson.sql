@@ -1,6 +1,6 @@
 Q1
 CREATE TABLE departments (
-department_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+department_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(20) NOT NULL,
 created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -49,7 +49,7 @@ UPDATE people SET department_id = 4 WHERE age > 30;
 UPDATE people SET department_id = 5 WHERE person_id = 6;
 
 Q5
-SELECT * FROM people ORDER BY age DESC;
+SELECT * FROM people WHERE gender = 1 ORDER BY age DESC ;
 
 Q6
 peopleテーブルのdepartment_idが1のレコード一覧を、
@@ -63,10 +63,10 @@ Q8
 SELECT * FROM people WHERE department_id = 1 ORDER BY age;
 
 Q9
-SELECT AVG(age) AS average_age FROM people WHERE department_id = 2;
+SELECT AVG(age) AS average_age FROM people WHERE gender = 1 AND department_id = 2;
 
 Q10
-SELECT p.name, p.department_id, r.content FROM people p RIGHT JOIN reports r USING (person_id);
+SELECT p.name, d.name, r.content FROM people p RIGHT JOIN departments d USING (department_id) RIGHT JOIN reports r USING (person_id);
 
 Q11
 SELECT p.name FROM people p LEFT JOIN reports r USING (person_id) WHERE r.content IS NULL;
